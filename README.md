@@ -1,4 +1,5 @@
 # POSsystem
+
 The output for the sampleExecution method in the view class will look like that after execution.
 
 New sale was started 
