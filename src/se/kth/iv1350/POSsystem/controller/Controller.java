@@ -27,7 +27,7 @@ public class Controller {
     private ArrayList<ItemDTO> allItems = new ArrayList<ItemDTO>();
     
     /**
-     * register item get the name and quantity of each item and print the item
+     * register item get the name and quantity of each item and print out the item
      * discription to the io.
      *
      * @param name the name of each item.
@@ -39,14 +39,19 @@ public class Controller {
                 itemMatch.addQuantityNumber(quantity);
                 allItems.add(itemMatch);
             }
-        
         ItemDescription.printOutItemDescription(itemMatch);
     }
-    
+    /**
+     * showTotal operation shows the total price of the sale.
+     */
     public void showTotal(){
          ItemDescription.printOutTotal(allItems);
     }
     
+    /**
+     * the payAmount method prints out the amount paid and change to get back to the io.
+     * @param amountPaid amount that customer paid.
+     */
     public void payAmount (double amountPaid){
         Total total = new Total();
         double change  =sale.pay(amountPaid, total.measureTotalPriceAndVAT(allItems));

@@ -8,7 +8,7 @@ public class Item {
     public Item() {
 
     }
-    ItemDTO[] item = {new ItemDTO(0, "carrot", 10, 2), new ItemDTO(1, "tomato", 12, 2.2),
+    private ItemDTO[] item = {new ItemDTO(0, "carrot", 10, 2), new ItemDTO(1, "tomato", 12, 2.2),
         new ItemDTO(2, "banana", 14, 2.5), new ItemDTO(3, "pizza", 20, 3.2)};
 
     /**

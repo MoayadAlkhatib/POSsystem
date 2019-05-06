@@ -12,9 +12,9 @@ public class ItemDescription {
     }
 
     /**
-     * print out the item discription to th io
+     * print out the item discription to the io.
      *
-     * @param item to show its description
+     * @param item to show its description.
      */
     public static void printOutItemDescription(ItemDTO item) {
 
@@ -25,7 +25,11 @@ public class ItemDescription {
         System.out.println("\n");
 
     }
-
+    
+     /**
+     * print out the total price for the sale to the io.
+     * @param items all items that have been entered.
+     */
     public static void printOutTotal(ArrayList<ItemDTO> items) {
         Total total = new Total();
 

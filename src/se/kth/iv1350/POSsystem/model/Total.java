@@ -46,9 +46,9 @@ public class Total {
     }
     
     /**
-     * measure the entire 
-     * @param items
-     * @return 
+     * measure the entire price including the taxes.
+     * @param items that has been entered.
+     * @return the total price including taxes.
      */
     public double measureTotalPriceAndVAT (ArrayList<ItemDTO> items){
       double totalPriceAndVAT =0;

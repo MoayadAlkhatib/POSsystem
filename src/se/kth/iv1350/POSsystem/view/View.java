@@ -13,7 +13,7 @@ public class View {
         this.controller = contr;
     }
     /**
-     * Execute the program with an input
+     * Simulate an input that generates calls to all system operations
      */
     public void runSampleExecution(){
         controller.startNewSale();
