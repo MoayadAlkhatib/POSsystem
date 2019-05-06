@@ -20,6 +20,7 @@ public class View {
         controller.registerItem("banana", 4);
         controller.registerItem("pizza", 3);
         controller.showTotal();
+        controller.payAmount(140);
         
     }
 }

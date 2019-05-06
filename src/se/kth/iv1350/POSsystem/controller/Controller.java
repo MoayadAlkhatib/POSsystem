@@ -5,6 +5,7 @@ import se.kth.iv1350.POSsystem.integration.Item;
 import se.kth.iv1350.POSsystem.integration.ItemDTO;
 import se.kth.iv1350.POSsystem.integration.ItemDescription;
 import se.kth.iv1350.POSsystem.model.Sale;
+import se.kth.iv1350.POSsystem.model.Total;
 
 public class Controller {
 
@@ -19,7 +20,7 @@ public class Controller {
      */
     public void startNewSale() {
         sale = new Sale();
-        System.out.println("New sale was started");
+        System.out.println("New sale was started \n");
     }
     private Item item = new Item();
     private ItemDTO itemMatch;
@@ -44,6 +45,14 @@ public class Controller {
     
     public void showTotal(){
          ItemDescription.printOutTotal(allItems);
+    }
+    
+    public void payAmount (double amountPaid){
+        Total total = new Total();
+        double change  =sale.pay(amountPaid, total.measureTotalPriceAndVAT(allItems));
+        System.out.println("\nAmount paid " +amountPaid);
+        System.out.println("Change to get back " +change);
+        
     }
       
 
