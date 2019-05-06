@@ -5,8 +5,11 @@ The output for the sampleExecution method in the view class will look like that 
 New sale was started 
 
 item banana
+
 price 14.0
+
 Tax 2.5
+
 quantity 4
 
 
