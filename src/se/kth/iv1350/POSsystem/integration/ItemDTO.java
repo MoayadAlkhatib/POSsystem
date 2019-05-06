@@ -1,6 +1,10 @@
 
 package se.kth.iv1350.POSsystem.integration;
 
+/**
+ * This class has all attributes that item has.
+ */
+
 public class ItemDTO {
     private double itemId;
     private String name;

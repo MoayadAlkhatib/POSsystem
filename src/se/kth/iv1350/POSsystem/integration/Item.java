@@ -1,5 +1,9 @@
 package se.kth.iv1350.POSsystem.integration;
 
+/**
+ * This class works as database that contains all items in the store.
+ */
+
 public class Item {
 
     /**

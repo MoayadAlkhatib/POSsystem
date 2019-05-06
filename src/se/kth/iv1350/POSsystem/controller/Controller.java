@@ -7,6 +7,10 @@ import se.kth.iv1350.POSsystem.integration.ItemDescription;
 import se.kth.iv1350.POSsystem.model.Sale;
 import se.kth.iv1350.POSsystem.model.Total;
 
+/**
+ * The controller class has all system operations and all calls go through it.
+ */
+
 public class Controller {
 
     public Controller() {

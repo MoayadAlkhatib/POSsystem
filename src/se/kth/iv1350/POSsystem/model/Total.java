@@ -5,9 +5,12 @@ import java.util.ArrayList;
 import se.kth.iv1350.POSsystem.integration.ItemDTO;
 
 /**
- * create a constuctor to use the methos in ItemDescription.
+ * This class has all methods that calculates the total price of the sale.
  */
 public class Total {
+    /**
+ * create a constuctor to use the methos in ItemDescription.
+ */
     public Total(){
         
     }

@@ -3,6 +3,10 @@ package se.kth.iv1350.POSsystem.integration;
 import java.util.ArrayList;
 import se.kth.iv1350.POSsystem.model.Total;
 
+/**
+ * This class has all methods to print out the item descriptions and the total price to the io.
+ */
+
 public class ItemDescription {
 
     private ItemDTO item;

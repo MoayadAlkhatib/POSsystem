@@ -3,6 +3,10 @@ package se.kth.iv1350.POSsystem.view;
 
 import se.kth.iv1350.POSsystem.controller.Controller;
 
+/**
+ * This class can be used by the user. user can enter all system operations with different inputs.
+ */
+
 public class View {
     private Controller controller;
     /**
