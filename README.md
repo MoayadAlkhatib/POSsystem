@@ -2,7 +2,7 @@
 
 The output for the sampleExecution method in the view class will look like that after execution.
 
-/*New sale was started 
+New sale was started 
 
 item banana
 price 14.0
@@ -22,4 +22,4 @@ Total to pay 135.6
 
 Amount paid 140.0
 Change to get back 4.400000000000006
-*/
+
