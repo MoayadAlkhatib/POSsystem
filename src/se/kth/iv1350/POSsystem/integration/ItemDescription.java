@@ -1,5 +1,6 @@
 package se.kth.iv1350.POSsystem.integration;
 
+import java.util.ArrayList;
 import se.kth.iv1350.POSsystem.model.Total;
 
 public class ItemDescription {
@@ -15,19 +16,19 @@ public class ItemDescription {
      *
      * @param item to show its description
      */
+    public static void printOutItemDescription(ItemDTO item) {
 
-    public static void printOutItemDescription(ItemDTO[] item) {
-        for (int i = 0; i < item.length; i++) {
-            System.out.println("item " + item[i].getName());
-            System.out.println("price " + item[i].getPrice());
-            System.out.println("Tax " + item[i].getTax());
-            System.out.println("quantity " + item[i].getQuantity());
-            System.out.println("\n");
-        }
+        System.out.println("item " + item.getName());
+        System.out.println("price " + item.getPrice());
+        System.out.println("Tax " + item.getTax());
+        System.out.println("quantity " + item.getQuantity());
+        System.out.println("\n");
+
     }
 
-    public static void printOutTotal(ItemDTO[] items) {
+    public static void printOutTotal(ArrayList<ItemDTO> items) {
         Total total = new Total();
+
         System.out.println("Total price " + total.measureTotalPrice(items));
         System.out.println("Total VAT " + total.measureTotalVAT(items));
         System.out.println("Total to pay " + total.measureTotalPriceAndVAT(items));

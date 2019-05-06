@@ -1,6 +1,7 @@
 
 package se.kth.iv1350.POSsystem.model;
 
+import java.util.ArrayList;
 import se.kth.iv1350.POSsystem.integration.ItemDTO;
 
 /**
@@ -15,14 +16,14 @@ public class Total {
     * @param items that has been entered. 
     * @return the total price.
     */
-    public double measureTotalPrice (ItemDTO[] items){
+    public double measureTotalPrice (ArrayList<ItemDTO> items){
       double totalPrice =0;
-      for (int i =0; i<items.length; i++){
+      for (int i =0; i<items.size(); i++){
           double priceAfterAddingQuantity = 0;
-          if (items[i].getQuantity() > 1){
-          priceAfterAddingQuantity = items[i].getPrice()*items[i].getQuantity();
+          if (items.get(i).getQuantity() > 1){
+          priceAfterAddingQuantity = items.get(i).getPrice()*items.get(i).getQuantity()- items.get(i).getPrice();
           }
-         totalPrice= totalPrice + items[i].getPrice() + priceAfterAddingQuantity;
+         totalPrice= totalPrice + items.get(i).getPrice() + priceAfterAddingQuantity;
       }
       return totalPrice;  
     }
@@ -32,14 +33,14 @@ public class Total {
      * @param items that has been entered.
      * @return the total taxes.
      */
-    public double measureTotalVAT (ItemDTO[] items){
+    public double measureTotalVAT (ArrayList<ItemDTO> items){
       double totalVAT =0;
-      for (int i =0; i<items.length; i++){
+      for (int i =0; i<items.size(); i++){
           double VATAfterAddingQuantity = 0;
-          if (items[i].getQuantity() > 1){
-          VATAfterAddingQuantity = items[i].getTax() * items[i].getQuantity();
+          if (items.get(i).getQuantity() > 1){
+          VATAfterAddingQuantity = items.get(i).getTax() * items.get(i).getQuantity() - items.get(i).getTax();
           }
-         totalVAT= totalVAT + items[i].getTax() + VATAfterAddingQuantity;
+         totalVAT= totalVAT + items.get(i).getTax() + VATAfterAddingQuantity;
       }
       return totalVAT;  
     }
@@ -49,15 +50,15 @@ public class Total {
      * @param items
      * @return 
      */
-    public double measureTotalPriceAndVAT (ItemDTO[] items){
+    public double measureTotalPriceAndVAT (ArrayList<ItemDTO> items){
       double totalPriceAndVAT =0;
-      for (int i =0; i<items.length; i++){
+      for (int i =0; i<items.size(); i++){
           double totalAfterAddingQuantity = 0;
-          if (items[i].getQuantity() > 1){
-          totalAfterAddingQuantity = items[i].getTax() * items[i].getQuantity();
-          totalAfterAddingQuantity += items[i].getPrice()*items[i].getQuantity();
+          if (items.get(i).getQuantity() > 1){
+          totalAfterAddingQuantity = items.get(i).getTax() * items.get(i).getQuantity() - items.get(i).getTax();
+          totalAfterAddingQuantity += items.get(i).getPrice()*items.get(i).getQuantity() - items.get(i).getPrice();
           }
-         totalPriceAndVAT= totalPriceAndVAT + items[i].getPrice() + items[i].getTax() + totalAfterAddingQuantity;
+         totalPriceAndVAT= totalPriceAndVAT + items.get(i).getPrice() + items.get(i).getTax() + totalAfterAddingQuantity;
       }
       return totalPriceAndVAT;  
     }

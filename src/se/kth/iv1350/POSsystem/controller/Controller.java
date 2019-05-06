@@ -1,5 +1,6 @@
 package se.kth.iv1350.POSsystem.controller;
 
+import java.util.ArrayList;
 import se.kth.iv1350.POSsystem.integration.Item;
 import se.kth.iv1350.POSsystem.integration.ItemDTO;
 import se.kth.iv1350.POSsystem.integration.ItemDescription;
@@ -20,53 +21,30 @@ public class Controller {
         sale = new Sale();
         System.out.println("New sale was started");
     }
-    Item item = new Item();
-    ItemDTO[] itemMatch;
-
-    public void registerItem(String[] name) {
-        int counter = 0;
-        for (int i = 0; i < name.length; i++) {
-            if (item.checkIfItemExist(name[i])) {
-                counter++;
-            }
-        }
-            itemMatch = new ItemDTO[counter];
-            int j = 0;
-            for (int k = 0; k < name.length; k++) {
-                if (item.checkIfItemExist(name[k])) {
-                    itemMatch[j++] = item.extractTheItemThatMatches(name[k]);
-                }
-            }
-            ItemDescription.printOutItemDescription(itemMatch);
-            
-    }
+    private Item item = new Item();
+    private ItemDTO itemMatch;
+    private ArrayList<ItemDTO> allItems = new ArrayList<ItemDTO>();
     
-      public void registerItem(String[] name, int quantity) {
-        int counter = 0;
-        for (int i = 0; i < name.length; i++) {
-            if (item.checkIfItemExist(name[i])) {
-                counter++;
+    /**
+     * register item get the name and quantity of each item and print the item
+     * discription to the io.
+     *
+     * @param name the name of each item.
+     * @param quantity for item.
+     */
+    public void registerItem(String name, int quantity) {
+            if (item.checkIfItemExist(name)) {
+                itemMatch = item.extractTheItemThatMatches(name);
+                itemMatch.addQuantityNumber(quantity);
+                allItems.add(itemMatch);
             }
-        }
-            itemMatch = new ItemDTO[counter];
-            int j = 0;
-            for (int k = 0; k < name.length; k++) {
-                if (item.checkIfItemExist(name[k])) {
-                    itemMatch[j++] = item.extractTheItemThatMatches(name[k]);
-                    
-                }
-            }
-            for (int e =0; e<name.length; e++){
-                itemMatch[e].addQuantityNumber(quantity);
-            }
-            ItemDescription.printOutItemDescription(itemMatch);
-    }
-      public void showTotal(){
-          ItemDescription.printOutTotal(itemMatch);
-      }
-
         
-
-     
+        ItemDescription.printOutItemDescription(itemMatch);
+    }
     
+    public void showTotal(){
+         ItemDescription.printOutTotal(allItems);
+    }
+      
+
 }

@@ -17,11 +17,9 @@ public class View {
      */
     public void runSampleExecution(){
         controller.startNewSale();
-        String [] items = {"banana", "tomato"};
-        controller.registerItem(items);
-        controller.registerItem(items,2);
+        controller.registerItem("banana", 4);
+        controller.registerItem("pizza", 3);
         controller.showTotal();
-        
         
     }
 }
