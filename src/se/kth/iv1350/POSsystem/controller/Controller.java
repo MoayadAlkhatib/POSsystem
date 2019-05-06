@@ -59,9 +59,6 @@ public class Controller {
     public void payAmount (double amountPaid){
         Total total = new Total();
         double change  =sale.pay(amountPaid, total.measureTotalPriceAndVAT(allItems));
-        System.out.println("\nAmount paid " +amountPaid);
-        System.out.println("Change to get back " +change);
-        
     }
       
 

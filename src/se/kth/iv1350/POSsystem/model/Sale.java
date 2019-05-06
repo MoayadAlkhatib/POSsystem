@@ -11,7 +11,10 @@ public class Sale {
      * @return the change that customer will get back.
      */
     public double pay (double amountPaid, double priceToPay){
-        return amountPaid - priceToPay;
+        double change = amountPaid - priceToPay;
+        System.out.println("\nAmount paid " +amountPaid);
+        System.out.println("Change to get back " +change);
+        return change;
     }
 
 }
