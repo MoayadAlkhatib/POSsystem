@@ -1,7 +1,6 @@
 
 package se.kth.iv1350.POSsystem.model;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -14,11 +13,6 @@ public class SaleTest {
     public void setUp() {
         sale = new Sale();
     }
-    
-    @After
-    public void tearDown() {
-    }
-
     /**
      * Test of pay method, of class Sale.
      */
