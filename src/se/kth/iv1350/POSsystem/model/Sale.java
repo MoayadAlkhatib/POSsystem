@@ -12,8 +12,6 @@ public class Sale {
      */
     public double pay (double amountPaid, double priceToPay){
         double change = amountPaid - priceToPay;
-        System.out.println("\nAmount paid " +amountPaid);
-        System.out.println("Change to get back " +change);
         return change;
     }
 

@@ -49,7 +49,9 @@ public class ItemDTO {
     public int getQuantity(){
         return this.quantity;
     }
-    
+    public double getItemID(){
+        return this.itemId;
+    }
     
     
 }
