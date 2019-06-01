@@ -31,26 +31,26 @@ public class View {
             controller.registerItem("banana", 4);
             controller.registerItem("pizza", 3);
             controller.registerItem("unique", 3); // tests the data base failure exception.
-            controller.registerItem("melon", 3); // tests the invalid item identifier exception.
+            //controller.registerItem("melon", 3); // tests the invalid item identifier exception.
         }
-        catch (ItemNotFoundException e) {
+    catch (ItemNotFoundException e) {
             emh.showErrorMsg("Item can not be found.");
-        }
-        catch (DataBaseException e) {
-             emh.showErrorMsg("can not access the data base.");
-            LogHandler log;
+    }
+    catch (DataBaseException e) {
+            emh.showErrorMsg("can not access the data base.");
+        LogHandler log;
             try {
                 log = new LogHandler();
                 log.logTheException(e);
             } catch (IOException ex) {
                 ex.getMessage();
             }
-        }
+    }
         controller.showTotal();
         double amountPaid = 140;
         double change = controller.payAmount(amountPaid);
         System.out.println("\nAmount paid "+ amountPaid);
         System.out.println("Change to get back " +change);
 
-    }
+}
 }
