@@ -16,6 +16,8 @@ Tax 3.2
 quantity 3
 
 
+Jun 1, 2019 7:08:09 PM, ERROR: can not access the data base.
+
 Total price 116.0
 Total VAT 19.6
 Total to pay 135.6
