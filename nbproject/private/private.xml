@@ -6,11 +6,14 @@
             <file>file:/D:/projects/POSsystem/src/se/kth/iv1350/POSsystem/integration/Item.java</file>
             <file>file:/D:/projects/POSsystem/src/se/kth/iv1350/POSsystem/model/Total.java</file>
             <file>file:/D:/projects/POSsystem/src/se/kth/iv1350/POSsystem/startup/Main.java</file>
+            <file>file:/D:/projects/POSsystem/src/se/kth/iv1350/POSsystem/model/SaleObserver.java</file>
             <file>file:/D:/projects/POSsystem/src/se/kth/iv1350/POSsystem/view/View.java</file>
             <file>file:/D:/projects/POSsystem/src/se/kth/iv1350/POSsystem/integration/ItemDTO.java</file>
             <file>file:/D:/projects/POSsystem/src/se/kth/iv1350/POSsystem/controller/Controller.java</file>
             <file>file:/D:/projects/POSsystem/src/se/kth/iv1350/POSsystem/model/Sale.java</file>
             <file>file:/D:/projects/POSsystem/src/se/kth/iv1350/POSsystem/integration/ItemDescription.java</file>
+            <file>file:/D:/projects/POSsystem/src/se/kth/iv1350/POSsystem/view/TotalRevenueView.java</file>
+            <file>file:/D:/projects/POSsystem/test/se/kth/iv1350/POSsystem/controller/ControllerTest.java</file>
         </group>
     </open-files>
 </project-private>

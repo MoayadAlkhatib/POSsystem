@@ -10,7 +10,7 @@ import se.kth.iv1350.POSsystem.view.View;
 
 public class Main {
     public static void main (String args[]){
-        Controller contr = new Controller();
+        Controller contr = new Controller(1000);
         View view = new View (contr);
         view.runSampleExecution();
     }

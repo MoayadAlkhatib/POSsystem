@@ -9,7 +9,7 @@ import se.kth.iv1350.POSsystem.util.log.LogHandler;
  * different inputs.
  */
 public class View {
-
+    
     private Controller controller;
     private ErrorMessageHandler emh = new ErrorMessageHandler();
 
@@ -20,6 +20,7 @@ public class View {
      */
     public View(Controller contr) {
         this.controller = contr;
+        contr.addSaleObserver(new TotalRevenueView());
     }
 
     /**
@@ -32,25 +33,22 @@ public class View {
             controller.registerItem("pizza", 3);
             controller.registerItem("unique", 3); // tests the data base failure exception.
             //controller.registerItem("melon", 3); // tests the invalid item identifier exception.
-        }
-    catch (ItemNotFoundException e) {
+        } catch (ItemNotFoundException e) {
             emh.showErrorMsg("Item can not be found.");
-    }
-    catch (DataBaseException e) {
+        } catch (DataBaseException e) {
             emh.showErrorMsg("can not access the data base.");
-        LogHandler log;
+            LogHandler log;
             try {
                 log = new LogHandler();
                 log.logTheException(e);
             } catch (IOException ex) {
                 ex.getMessage();
             }
-    }
+        }
         controller.showTotal();
         double amountPaid = 140;
         double change = controller.payAmount(amountPaid);
-        System.out.println("\nAmount paid "+ amountPaid);
-        System.out.println("Change to get back " +change);
-
-}
+        System.out.println("\nAmount paid " + amountPaid);
+        System.out.println("Change to get back " + change);
+    }
 }
