@@ -11,6 +11,7 @@ import se.kth.iv1350.POSsystem.model.SaleObserver;
 import se.kth.iv1350.POSsystem.model.Total;
 import se.kth.iv1350.POSsystem.view.DataBaseException;
 import se.kth.iv1350.POSsystem.view.ItemNotFoundException;
+import se.kth.iv1350.POSsystem.view.TotalRevenueView;
 
 /**
  * The controller class has all system operations and all calls go through it.
@@ -37,6 +38,8 @@ public class Controller {
      */
     public void startNewSale() {
         sale = new Sale();
+        TotalRevenueView toalRevenue = new TotalRevenueView();
+        sale.addObserver(toalRevenue);
         System.out.println("New sale was started \n");
     }
     private Item item = new Item();

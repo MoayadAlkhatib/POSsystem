@@ -1,5 +1,5 @@
-Jun 3, 2019 3:03:05 AM, Exception was thrown: Can not access the data base.
+Jun 3, 2019 3:41:16 AM, Exception was thrown: Can not access the data base.
 se.kth.iv1350.POSsystem.view.DataBaseException: Can not access the data base.
-	at se.kth.iv1350.POSsystem.controller.Controller.registerItem(Controller.java:64)
+	at se.kth.iv1350.POSsystem.controller.Controller.registerItem(Controller.java:67)
 	at se.kth.iv1350.POSsystem.view.View.runSampleExecution(View.java:34)
 	at se.kth.iv1350.POSsystem.startup.Main.main(Main.java:15)
